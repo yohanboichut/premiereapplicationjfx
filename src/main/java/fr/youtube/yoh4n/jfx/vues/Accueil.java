@@ -1,5 +1,6 @@
 package fr.youtube.yoh4n.jfx.vues;
 
+import fr.youtube.yoh4n.jfx.controleur.Controleur;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -13,10 +14,16 @@ public class Accueil implements Vue{
 
     private Stage stage;
     private Scene scene;
+    private Controleur controleur;
 
     private BorderPane borderPane;
     private Button creationPersonne;
     private Button affichagePersonnes;
+
+
+    public void setControleur(Controleur controleur) {
+        this.controleur = controleur;
+    }
 
     public void setStage(Stage stage) {
         this.stage = stage;
@@ -29,9 +36,10 @@ public class Accueil implements Vue{
     private Accueil(){
 
     }
-    public static Accueil creer(Stage stage) {
+    public static Accueil creer(Stage stage,Controleur controleur) {
         Accueil accueil = new Accueil();
         accueil.setStage(stage);
+        accueil.setControleur(controleur);
         accueil.initialiserComposants();
         return accueil;
     }
@@ -42,6 +50,8 @@ public class Accueil implements Vue{
         this.affichagePersonnes = new Button("Afficher les personnes enregistrées");
         this.creationPersonne = new Button("Enregistrer une nouvelle personne");
 
+        this.affichagePersonnes.setOnAction(e-> controleur.gotoAffichagePersonnes());
+        this.creationPersonne.setOnAction(e -> controleur.gotoEnregistrementPersonne());
 
         this.affichagePersonnes.setMaxWidth(Double.MAX_VALUE);
         this.creationPersonne.setMaxWidth(Double.MAX_VALUE);
