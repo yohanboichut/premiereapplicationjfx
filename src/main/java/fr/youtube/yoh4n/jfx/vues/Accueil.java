@@ -18,9 +18,6 @@ public class Accueil implements Vue{
     private Button creationPersonne;
     private Button affichagePersonnes;
 
-
-
-
     public void setStage(Stage stage) {
         this.stage = stage;
     }
@@ -44,6 +41,7 @@ public class Accueil implements Vue{
         this.borderPane = new BorderPane();
         this.affichagePersonnes = new Button("Afficher les personnes enregistrées");
         this.creationPersonne = new Button("Enregistrer une nouvelle personne");
+
 
         this.affichagePersonnes.setMaxWidth(Double.MAX_VALUE);
         this.creationPersonne.setMaxWidth(Double.MAX_VALUE);

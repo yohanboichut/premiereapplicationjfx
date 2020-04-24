@@ -13,6 +13,8 @@ public class EnregistrementPersonne implements Vue {
     private Stage stage;
     private Scene scene;
 
+
+
     public void setStage(Stage stage) {
         this.stage = stage;
     }
@@ -46,4 +48,6 @@ public class EnregistrementPersonne implements Vue {
         this.stage.show();
 
     }
+
+
 }

@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.youtube.yoh4n.jfx.vues.EnregistrementPersonne">
    <top>
       <Label text="Enregistrement d'une nouvelle personne" BorderPane.alignment="CENTER">
@@ -22,13 +21,13 @@
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
             <Label text="Nom" />
-            <TextField />
+            <TextField/>
             <Label text="Prénom" />
-            <TextField />
+            <TextField/>
             <Label text="Pseudo" />
-            <TextField />
+            <TextField/>
             <Label text="Mot de passe" />
-            <PasswordField />
+            <PasswordField/>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                <children>
                   <Button mnemonicParsing="false" text="Reset" />
